@@ -10,7 +10,7 @@ With access to annotated electron microscopy images, we plan to analyze the 3D d
 ###Innovation
 If successful, this project will leverage a relatively new technique (electron microscopy) provide insight into one of the most critical aspects of neuronal organization, namely, the synapses. This work can potentially shed light how the 3D structure of synapse distribution relates to functional communication pathways in the brain, contributing towards the ultimate goal of mapping the network structure of the brain. 
 
-References
+###References
 [JNS] http://jn.physiology.org/content/jn/20/4/408.full.pdf  
 [HCP] http://www.humanconnectomeproject.org/  
 [FNA] http://www.ncbi.nlm.nih.gov/pubmed/25206325  
