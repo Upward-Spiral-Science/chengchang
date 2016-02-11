@@ -1,27 +1,17 @@
 ####Descriptive
-* What does the synapse location data look like?  
- * 3D location for every synapse?    
- * average # of synapses within a “voxel”?
-* Are cell bodies annotated or obvious?  
-* What area of cortex?  
-* Chemical vs. electrical synapses: are the two types differentiated in the labeling?  
+* How many NA, Inf, or other "bad" data values are there?
+* Quantities
+ * How many synapses total are there?
+ * How many bins are there?
+* Statistics
+ * What's the mean number of synapses within a bin?
+ * What's the median number of synapses per bin?
+ * What's the standard deviation?
 * What is the size of the scanned volume?  
- * From Anton-Sanchez 2014: 4500um^3, measuring 4000 synapses from 3 animals?  
- * What is the density /resolution?  
-   * What are the direction of brain slices?   
-   * resolution in the “z” direction vs. “x, y” direction  
-* How many animals / samples do we have?  
 
 ####Exploratory
-* What are the differences in distribution across layers?  
- * How do we tell between the different layers?  
-* What sort of clustering?  
- * Can we assess columnar organization?  
- * Can we separate functional groups (i.e. excitatory vs. inhibitory cells)?  
-   * From Bock2011: pg2: categorized postsynaptic targets based on morphology?  
-* Is it obvious which synapses belong to which cells?   
- * From Bock2011 pg2: was able to retrace the dentrite to the cell body?    
-   * Were able to isolate a target cell, and trace the inputs into that cell?
+* What do the distributions of synapse locations look like in the x, y, z coordinates?
+* What do some representative slices look like?
 
 ####Inferential
 * Similar to clustering in the Exploratory section: (example)  
