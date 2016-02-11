@@ -25,7 +25,7 @@
 
 ####Inferential
 * Similar to clustering in the Exploratory section: (example)  
- * ${H_0}$: mean distance between synapses the same across cortical layers/columns  
+ * [equation]{H_0}: mean distance between synapses the same across cortical layers/columns  
  * ${H_A}$: difference in mean distance between synapses across cortical layers/columns  
 
 ####Predictive
