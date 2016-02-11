@@ -1,16 +1,16 @@
 ####Descriptive
--What does the synapse location data look like?  
--3D location for every synapse?    
--average # of synapses within a “voxel”?
--Are cell bodies annotated or obvious?  
--What area of cortex?  
--Chemical vs. electrical synapses: are the two types differentiated in the labeling?  
--What is the size of the scanned volume?  
--From Anton-Sanchez 2014: 4500um^3, measuring 4000 synapses from 3 animals?  
--What is the density /resolution?  
--What are the direction of brain slices?   
--resolution in the “z” direction vs. “x, y” direction  
--How many animals / samples do we have?  
+* What does the synapse location data look like?  
+* 3D location for every synapse?    
+* average # of synapses within a “voxel”?
+* Are cell bodies annotated or obvious?  
+* What area of cortex?  
+* Chemical vs. electrical synapses: are the two types differentiated in the labeling?  
+* What is the size of the scanned volume?  
+* From Anton-Sanchez 2014: 4500um^3, measuring 4000 synapses from 3 animals?  
+* What is the density /resolution?  
+* What are the direction of brain slices?   
+* resolution in the “z” direction vs. “x, y” direction  
+* How many animals / samples do we have?  
 
 ####Exploratory
 -What are the differences in distribution across layers?  
