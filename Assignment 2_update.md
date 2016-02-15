@@ -1,7 +1,7 @@
 #### Descriptive
 
 -   How many NA, Inf, or other "bad" data values are there?  
--   > 0
+    > 0
 -   Quantities
     -   How many synapses total are there?  
     -   How many bins are there?  
