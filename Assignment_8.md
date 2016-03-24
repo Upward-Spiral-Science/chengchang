@@ -454,6 +454,8 @@ to 1 when the number of sample increases in alternative model; in the
 null model, it shows that the p-values stay around 0.05 which
 correspondes our expectation.
 
+<img src="./figs/simulated_chi2.png" data-canonical-src="./figs/simulated_chi2.png" width="250" />
+
 ### Predictive Analysis
 
 Because our data set is not totally categorical, we made up another
@@ -473,8 +475,9 @@ set: 3 for kNN, 0.001 for SVM and default values except maximum depth is
 5 for RF. LDA and QDA do not have to specify any parameter. Although
 these parameters may make a huge impact on the results of analysis, but
 for now we just go for these setting to see the performance. The picture
-below shows the performances of each classifier tested on simulated data
-and our real data.
+below shows the performances of each classifier tested on simulated data.
+
+<img src="./figs/simulated_classifier.png" data-canonical-src="./figs/simulated_classifier.png" width="250" />
 
 ### Testing Assumptions
 
