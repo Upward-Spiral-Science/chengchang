@@ -144,23 +144,26 @@ see the distribution of synapse density. The results are as below.
 <img src="./figs/synapses_hist.png" data-canonical-src="./figs/synapses_hist.png" width="300" />
 
 
-From these figures, we can see that there is no apperent trend of
-distribution. Also, since there are many 0*s* appeapr in the data since
+From these figures, we can see that there is no apparent trend of
+distribution. Also, since there are many 0*s* appear in the data since
 they are masked, we decided to filter out these 0*s* in order to make
 our further analysis more accurate.
 
 ### Inferential Analysis
 
-In order to deal with the 0*s*, we created anotehr attribute, the ratio
-between synapses and unmasked, to filter out the bins with less than 0.5
+In order to deal with the 0*s*, we created another attribute, the ratio
+between synapses and unmasked, to filter out the bins with less than 0.5 unmasked voxels
 and called it `weighted synapses`. By doing so, we looked at the
 distribution of bins again. Here, we assumed this distribution follows
 Poisson distribution. Hence, we chose the chi-square test for goodness
 of fit to perform this hypothesis testing.
 
+<img src="./figs/weighted_thresh0.5.png" data-canonical-src="./figs/weighted_thresh0.5.png" width="300" />
+<img src="./figs/weighted_chi2.png" data-canonical-src="./figs/weighted_chi2.png" width="300" />
+
 The result showed that the p-value is nearly 0, which strongly rejected
 our assumption that the distribution of bins follows Poission
-distribution. Since this test significantly rejected, we may needed to
+distribution. Since this test significantly rejected, we may need to
 reconsider this hypothesis and maybe try to fit with Gaussian or
 log-normal distribution.
 
@@ -168,8 +171,16 @@ log-normal distribution.
 
 Since our data does not have categorical data, we created another
 attribute again: the density of synapses in one Z-layer is high or low.
-First, we used k-means and set the *k* = 2 to generate 2 clusters of
-densities. And then we got the labels of each Z-layer. Next, we split
+First, we removed the blank edges of each Z-layer by cutting out rows and columns that had <=50% unmasked voxels.
+
+<img src="./figs/example_Z_noedge.png" data-canonical-src="./figs/example_Z_noedge.png" width="300" />
+
+Then, we used k-means and set the *k* = 2 to generate 2 clusters of
+densities. And then we got the labels of each Z-layer.
+
+<img src="./figs/Z_labels.png" data-canonical-src="./figs/Z_labels.png" width="300" />
+
+Next, we split
 each Z-layer into 5 × 5 grids, and tried to use these grids to predict
 whether this grid belongs to high density layer or low density layer.
 After labeling the Z-layers, we then use different classifiers to train
@@ -206,14 +217,16 @@ and test our data set. The results are below,
 </tbody>
 </table>
 
-These classifiers have accracies between 75 to 80 percent, which is
-better than change (i.e., random guessing). However, these numbers are
+These classifiers have accuracies between 75 to 80 percent, which is
+better than chance (i.e., random guessing). However, these numbers are only
 slightly better than just choosing the class with the maximum prior 100%
-of the time under the assumption that the priors is ture. Given the
+of the time under the assumption that the prior is true. Given the
 large overlap area in observed densities from two classes, if we wanted
 to distinguish between similar populations of Z-layers with different
 priors (i.e., another data set), then it is likely that the accuracy
 will decrease.
+
+<img src="./figs/grid_hist.png" data-canonical-src="./figs/grid_hist.png" width="300" />
 
 ### Testing Assumptions
 
