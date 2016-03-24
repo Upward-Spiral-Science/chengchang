@@ -498,8 +498,8 @@ coefficient is around 0.3 or below, then we may conclude that these two
 variables have low correlation; a value around 0.6 or higher indicates a
 high correlation. Although it is needed to notice that this procedure
 check the linear correlation only. For testing independence of bins and
-means, we calculated the covariance matrix and check the ratio of on-
-and off- diagonal. If the ratio is large, then we may conclude that they
+means, we calculated the correlation matrix and checked if the off- diagonals were large.
+If the values were large, then we may conclude that they
 are not linearly independent.
 
 For testing whether bins and means are identically distributed or not,
@@ -511,6 +511,6 @@ at 1 cluster, which means there does not exist two or more different
 clusters, then it is likely that the data is identically distributed.
 
 For testing class conditional covariance, we fitted the each class with
-linear regression and computed the residuals. Then we plot the residual
+linear regression and computed the residuals. Then we plot the residual assignment errors
 with grid means to see if they can be seperated into two different
 groups by grid means.
