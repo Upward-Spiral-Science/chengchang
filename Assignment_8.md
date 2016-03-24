@@ -299,7 +299,7 @@ previous assumption.
 </table>
 
 Next, we tested whether these bins are independently sampled and
-identically distributed. The figures below show the covariance matrix
+identically distributed. The figures below show the correlation matrix
 and BIC score with GMM clustering. Since the content in the off-diagonal
 is not 0 in the most part, it suggests that bins are not independent.
 But the optimal number of cluster is 1, which suggests that they are
@@ -317,9 +317,9 @@ not identical.
 <img src="./figs/grid_correlations.png" data-canonical-src="./figs/grid_correlations.png" width="300" />
 <img src="./figs/grid_BIC.png" data-canonical-src="./figs/grid_BIC.png" width="300" />
 
-About the Z-layers, as the ratio of on- and off-diagonal determinants is
-extremely large, we can conclude that they are independent in fact. But
-since the optimal number of clusters is not 1, suggesting that the
+With the Z-layers, we see that there are large correlations between adjacent Z-layers, but otherwise, correlation between distant Z-layers is relatively small.
+From this, we can conclude that the Z-layers are not independent.
+Since the optimal number of clusters is not 1, the
 Z-layers are not identically distributed.
 
 <img src="./figs/Z_correlations.png" data-canonical-src="./figs/Z_correlations.png" width="300" />
