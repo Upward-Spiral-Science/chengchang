@@ -132,6 +132,18 @@ to look at the distribution of synapses. We tried to examine in
 different views: by one dimension, two dimensions, and use histogram to
 see the distribution of synapse density. The results are as below.
 
+##### one dimension
+<img src="./figs/synapses_X.png" data-canonical-src="./figs/synapses_X.png" width="300" />
+<img src="./figs/synapses_Y.png" data-canonical-src="./figs/synapses_Y.png" width="300" />
+<img src="./figs/synapses_Z.png" data-canonical-src="./figs/synapses_Z.png" width="300" />
+##### two dimensions
+<img src="./figs/synapses_XY.png" data-canonical-src="./figs/synapses_XY.png" width="300" />
+<img src="./figs/synapses_XZ.png" data-canonical-src="./figs/synapses_XZ.png" width="300" />
+<img src="./figs/synapses_YZ.png" data-canonical-src="./figs/synapses_YZ.png" width="300" />
+##### histogram
+<img src="./figs/synapses_hist.png" data-canonical-src="./figs/synapses_hist.png" width="300" />
+
+
 From these figures, we can see that there is no apperent trend of
 distribution. Also, since there are many 0*s* appeapr in the data since
 they are masked, we decided to filter out these 0*s* in order to make
