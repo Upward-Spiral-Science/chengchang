@@ -326,11 +326,11 @@ Z-layers are not identically distributed.
 <img src="./figs/Z_BIC.png" data-canonical-src="./figs/Z_BIC.png" width="300" />
 
 Finally, we tested the conditional difference between high and low
-density Z-layers. From the figure below, it clearly that the classifier
+density Z-layers. From the figure below, it's clear that the classifier
 cannot distinguish grids just based on their means. Therefore this
 assumption is false.
 
-\[FIGURE for conditional\]
+<img src="./figs/class_resid_error.png" data-canonical-src="./figs/class_resid_error.png" width="300" />
 
 ### Next Steps
 
