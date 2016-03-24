@@ -308,10 +308,13 @@ actually identically distributed.
 \[FIGURE for bins\]
 
 Then, we examined the iid assumption of means of grid as a whole and in
-Z-layer in particular. From the figures below, we see that the ratio of
-on- and off- diagonal in the covariance matrix is very small, suggesting
-that they are not independent. Since the optimal number of clusters is
-1, we concluded the grid means are identical.
+Z-layer in particular. From the figures below, we see that the content in
+the off-diagonal is not 0, suggesting that grids are not independent.
+Since the optimal number of clusters is 2, we concluded the grid means are
+not identical.
+
+<img src="./figs/grid_correlations.png" data-canonical-src="./figs/grid_correlations.png" width="300" />
+<img src="./figs/grid_BIC.png" data-canonical-src="./figs/grid_BIC.png" width="300" />
 
 About the Z-layers, as the ratio of on- and off-diagonal determinants is
 extremely large, we can conclude that they are independent in fact. But
