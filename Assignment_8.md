@@ -305,7 +305,8 @@ is not 0 in the most part, it suggests that bins are not independent.
 But the optimal number of cluster is 1, which suggests that they are
 actually identically distributed.
 
-\[FIGURE for bins\]
+<img src="./figs/bin_correlations.png" data-canonical-src="./figs/bin_correlations.png" width="300" />
+<img src="./figs/bin_BIC.png" data-canonical-src="./figs/bin_BIC.png" width="300" />
 
 Then, we examined the iid assumption of means of grid as a whole and in
 Z-layer in particular. From the figures below, we see that the content in
@@ -321,7 +322,8 @@ extremely large, we can conclude that they are independent in fact. But
 since the optimal number of clusters is not 1, suggesting that the
 Z-layers are not identically distributed.
 
-\[FIGURE for grid and Z\]
+<img src="./figs/Z_correlations.png" data-canonical-src="./figs/Z_correlations.png" width="300" />
+<img src="./figs/Z_BIC.png" data-canonical-src="./figs/Z_BIC.png" width="300" />
 
 Finally, we tested the conditional difference between high and low
 density Z-layers. From the figure below, it clearly that the classifier
