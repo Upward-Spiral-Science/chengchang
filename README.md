@@ -34,3 +34,6 @@ Team repo for: andyweic,
 
 ### Assignment 11  
 [New Analysis] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%2011.ipynb)  
+
+### Assignment 12  
+[New Analysis] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%2012.ipynb)  
