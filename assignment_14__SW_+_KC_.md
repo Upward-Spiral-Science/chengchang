@@ -123,9 +123,6 @@ focusing on the density of synapses across the one specific
 3D-dimensional layer of cortex.
 
 Testing Assumptions
-===================
-
-Testing Assumptions
 -------------------
 
 In our analysis, we made a few assumptions about our data set:
@@ -228,7 +225,7 @@ is not 0 in the most part, it suggests that bins are not independent.
 But the optimal number of cluster is 1, which suggests that they are
 actually identically distributed.
 
-\[FIGURE for bins\]
+(/figs/coef_wd.png)
 
 Then, we examined the iid assumption of means of grid as a whole and in
 Z-layer in particular. From the figures below, we see that the ratio of
