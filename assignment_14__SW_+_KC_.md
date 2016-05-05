@@ -296,15 +296,15 @@ These plots are examining the data in 2-dimension.
 
 ### X-Y coordinate
 
-![](figs/XY-coor_2.png?raw=true)
+![](figs/XY-coor.png?raw=true)
 
 ### X-Z coordinate
 
-![](figs/XZ-coor_2.png?raw=true)
+![](figs/XZ-coor.png?raw=true)
 
 ### Y-Z coordinate
 
-![](figs/YZ-coor_2.png?raw=true)
+![](figs/YZ-coor.png?raw=true)
 
 3D Plot
 -------
