@@ -564,14 +564,14 @@ Assumption Checking
 
 We checked the normality of Y-groups.
 
-![](figs/qq-yg.png?raw=true)
+![](figs/qq_yg.png?raw=true)
 
 ### Identical testing
 
 Also, we used the clustering to check whether Y-groups are identical by
 Using BIC score.
 
-![](figs/bic-yg.png?raw=true)
+![](figs/bic_yg.png?raw=true)
 
 The result showed that there are actually only 1 cluster in Y-group.
 
@@ -664,11 +664,11 @@ number of synapses along Y/X axis.
 
 ### Along X Coordinate
 
-\[fig\]
+![](figs/alo_X.png?raw=true)
 
 ### Along Y Coordinate
 
-\[fig\]
+![](figs/alo_Y.png?raw=true)
 
 Blur images with Gaussian filter
 --------------------------------
@@ -678,11 +678,11 @@ tell us more information.
 
 ### Sigma = 0
 
-\[fig\]
+![](figs/GF_0.png?raw=true)
 
 ### Sigma = 1.5
 
-\[fig\]
+![](figs/GF_1.5.png?raw=true)
 
 GLCM in Z-layer
 ---------------
@@ -692,15 +692,19 @@ angles and distances.
 
 ### Level = 5
 
-\[fig\]
+![](figs/GLCM_L5.png?raw=true)
 
 ### Level = 40
 
-\[fig\]
+![](figs/GLCM_L40.png?raw=true)
 
 ### Patch = 6
 
-\[fig\]
+![](figs/GLCM_P6.png?raw=true)
+
+### Patch = 12
+
+![](figs/GLCM_P12.png?raw=true)
 
 Compute GLCM Properties
 -----------------------
@@ -709,7 +713,7 @@ Then, we computed the properties of GLCM, including the contrast,
 dissimilarity, homogeneity energy and correlation. From the figure
 below, we can know that they are all somwehat correlated.
 
-\[FIG\]
+![](figs/GLCM_Properties.png?raw=true)
 
 Entropy of Z-layer
 ------------------
@@ -719,11 +723,11 @@ that useful for further analysis.
 
 ### Disk = 5
 
-\[FIG\]
+![](figs/ED_5.png?raw=true)
 
 ### Disk = 20
 
-\[FIG\]
+![](figs/ED_20.png?raw=true)
 
 Weighted Synapse Data
 ---------------------
