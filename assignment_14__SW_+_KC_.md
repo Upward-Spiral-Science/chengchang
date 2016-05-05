@@ -226,6 +226,7 @@ But the optimal number of cluster is 1, which suggests that they are
 actually identically distributed.
 
 ![](figs/coef_wd.png?raw=true)
+![](figs/bic_wd.png?raw=true)
 
 Then, we examined the iid assumption of means of grid as a whole and in
 Z-layer in particular. From the figures below, we see that the ratio of
@@ -233,21 +234,23 @@ on- and off- diagonal in the covariance matrix is very small, suggesting
 that they are not independent. Since the optimal number of clusters is
 1, we concluded the grid means are identical.
 
-\[FIGURE for \]
+![](figs/coef_gm.png?raw=true)
+![](figs/bic_gm.png?raw=true)
 
 About the Z-layers, as the ratio of on- and off-diagonal determinants is
 extremely large, we can conclude that they are independent in fact. But
 since the optimal number of clusters is not 1, suggesting that the
 Z-layers are not identically distributed.
 
-\[FIGURE for grid and Z\]
+![](figs/coco_gm.png?raw=true)
+![](figs/cocobic_gm.png?raw=true)
 
 Finally, we tested the conditional difference between high and low
 density Z-layers. From the figure below, it clearly that the classifier
 cannot distinguish grids just based on their means. Therefore this
 assumption is false.
 
-\[FIGURE for conditional\]
+![](figs/residual.png?raw=true)
 
 New Analysis
 ============
