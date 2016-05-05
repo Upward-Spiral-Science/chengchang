@@ -264,30 +264,30 @@ First of all, we remove the edges and reexamine the data.
 
 ### X coordinate
 
-\[figure\]
+![](figs/X-coor_1.png?raw=true)
 
 ### Y coordinate
 
-\[figure\]
+![](figs/Y-coor_1.png?raw=true)
 
 ### Z coordinate
 
-\[figure\]
+![](figs/Z-coor_1.png?raw=true)
 
 Distribution of Data (1D)
 -------------------------
 
 ### X coordinate
 
-\[figure\]
+![](figs/X-coor_2.png?raw=true)
 
 ### Y coordinate
 
-\[figure\]
+![](figs/Y-coor_2.png?raw=true)
 
 ### Z coordinate
 
-\[figure\]
+![](figs/Z-coor_2.png?raw=true)
 
 Distribution of Data (2D)
 -------------------------
@@ -296,15 +296,15 @@ These plots are examining the data in 2-dimension.
 
 ### X-Y coordinate
 
-\[figure\]
+![](figs/XY-coor_2.png?raw=true)
 
 ### X-Z coordinate
 
-\[figure\]
+![](figs/XZ-coor_2.png?raw=true)
 
 ### Y-Z coordinate
 
-\[figure\]
+![](figs/YZ-coor_2.png?raw=true)
 
 3D Plot
 -------
@@ -313,22 +313,22 @@ These plots are examining the data in 3-dimension.
 
 ### 3D plot of Weighted Synapese
 
-\[fig\]
+![](figs/3D_WS.png?raw=true)
 
 ### 3D Plot with High-density
 
-\[fig\]
+![](figs/3D_HWS.png?raw=true)
 
 ### 3D Plot with Very High-density
 
-\[fig\]
+![](figs/3D_VHWS.png?raw=true)
 
 Histogram of Weighted Synapses
 ------------------------------
 
 We ploted the histogram using the whole data set.
 
-\[fig\]
+![](figs/HD_hist.png?raw=true)
 
 3D Plot with different filter levels
 ------------------------------------
@@ -337,11 +337,11 @@ Also, we used different filter levels to look art the data.
 
 ### Filter level = 0.7
 
-\[fig\]
+![](figs/3D_FL_0.7.png?raw=true)
 
-### Filter level = 0.8
+### Filter level = 0.82
 
-\[fig\] \#\# Chi-squared Test for Uniform Distribution
+![](figs/3D_FL_0.82.png?raw=true)
 
 We tested whether the distribution of synapses follows uniform
 distribution, but, obviously the p-value is nearly 0. Therefore, we
