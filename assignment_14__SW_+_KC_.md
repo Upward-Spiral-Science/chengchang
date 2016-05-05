@@ -353,7 +353,7 @@ Boxplot of Synapses
 We used boxplot try to examine whether there is the existence of
 outlier, and the answer is not.
 
-\[fig\]
+![](figs/box_WS.png?raw=true)
 
 Fourier Transform
 -----------------
@@ -362,13 +362,15 @@ Just for a try, we used Fourier transform to look at the data.
 
 ### X-Y coordinate
 
-\[figure\]
+![](figs/FT_XY.png?raw=true)
 
 ### X-Z coordinate
 
-\[figure\]
+![](figs/FT_XZ.png?raw=true)
 
 ### Y-Z coordinate
+
+![](figs/FT_YZ.png?raw=true)
 
 1-Way ANOVA at Z-layer
 ----------------------
@@ -392,34 +394,34 @@ distributed.
 
 ### Z-layer 1
 
-\[fig\]
+![](figs/qq-1.png?raw=true)
 
 ### Z-layer 2
 
-\[fig\]
+![](figs/qq-2.png?raw=true)
 
 ### Z-layer 3
 
-\[fig\]
+![](figs/qq-3.png?raw=true)
 
 ### Z-layer 4
 
-\[fig\]
+![](figs/qq-1.png?raw=true)
 
 ### Z-layer 5
 
-\[fig\]
+![](figs/qq-5.png?raw=true)
 
 ### Z-layer 6
 
-\[fig\]
+![](figs/qq-6.png?raw=true)
 
 Distribution of Y-layer
 -----------------------
 
 First of all, let us look at the data of Y-layer.
 
-\[fig\]
+![](figs/dist_Y.png?raw=true)
 
 ### Distribution of Y-group
 
@@ -432,19 +434,19 @@ We then used 2-d plot to see the density in each Y-group.
 
 #### Y-group 1
 
-\[fig\]
+![](figs/den_y1.png?raw=true)
 
 #### Y-group 2
 
-\[fig\]
+![](figs/den_y2.png?raw=true)
 
 #### Y-group 3
 
-\[fig\]
+![](figs/den_y3.png?raw=true)
 
 #### Y-group 4
 
-\[fig\]
+![](figs/den_y4.png?raw=true)
 
 1-way ANOVA at Y-group
 ----------------------
@@ -562,18 +564,16 @@ Assumption Checking
 
 We checked the normality of Y-groups.
 
-\[fig\]
+![](figs/qq-yg.png?raw=true)
 
 ### Identical testing
 
 Also, we used the clustering to check whether Y-groups are identical by
 Using BIC score.
 
-\[fig\]
+![](figs/bic-yg.png?raw=true)
 
 The result showed that there are actually only 1 cluster in Y-group.
-
-\[fig\]
 
 ### Clustering
 
@@ -581,13 +581,13 @@ Evev though we know there are only 1 clustering suggested in last
 analysis, we were curious about if we specify more clusters to classify
 it, what it would be?
 
-\[fig\]
+![](figs/clu_3d.png?raw=true)
 
 #### Box plot
 
 Then we used box plot to see the properties of 3 different clusters.
 
-\[fig\]
+![](figs/box_c3.png?raw=true)
 
 #### Classification by 3D Cubes
 
