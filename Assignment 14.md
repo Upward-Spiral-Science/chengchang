@@ -3,6 +3,37 @@ Table of Contents:
 ------------------------------------------------------------------------
 
 -   [Overview](#overview)
+-   [Exploring the Data](#exploring-the-data)
+    -   [Data set contents](#data-set-contents)
+    -   [Statistics](#statistics)
+    -[Exploritory Analysis - Raw Synapse Count](#exploritory-analysis-raw-synapse-count)
+       - [Distribution of Synapses](#distribution-of-synapses)
+       - [1-Dimensional Marginal Distributions](#1-dimensional-marginal-distributions)
+       - [2-Dimensional MarginalDistributions](#2-dimensional-marginal-distributions)
+    - [Exploratory Analysis - Weighted Synaptic Count](#exploratory-analysis-weighted-synaptic-count)
+       - [Distribution of Unmasked Count](#distribution-of-unmasked-count)
+       - [Synapse vs. Unmasked](#synapse-vs-unmasked)
+       - [Weighted Synapse](#weighted-synapse)
+- [Hypothesis Testing](#hypothesis-testing)
+    - [Statistical Test](#statistical-test)
+         - [TestDefinition](#test-definition)
+         - [Algorithm](#algorithm)
+         - [Simulated Data](#simulated-data)
+         - [Simulated Data Result](#simulated-data-result)
+         - [Statistical Test on Weight Data](#statistical-test-on-weight-data)
+- [Classification](#classification)
+    - [Problem Definition](#problem-definition)
+        - [Assumptions](#assumptions)
+        - [Classification Problem](#classification-problem)
+    - [Implementation / Setup](#implementation/setup)
+        - [Example x-y grid](#example-x-y-grid)
+        - [Grid Means by Z-layer](#grid-means-by-z-layer)
+        - [Separating Z-layers into 2 groups](#separating-z-layers-into-two-groups)
+        - [Grid Means Across the 2 Groups](#grid_means_across_2_groups)
+    - [Classification Results](#classification-results)
+        - [Accuracy of each classifier](#accuracy-of-each-classifier)
+        - [Interpretation](#interpretation)
+        
 -   [Weighted Synapse Data](#weighted-synapse-data)
     -   [Testing Assumptions](#testing-assumptions)
         -   [Testing Independence](#testing-independence)
@@ -48,6 +79,199 @@ can map entire section of cortex in details. Therefore, we are able to
 analyze the distribution in cortex. In this project, we have been
 focusing on the density of synapses across the one specific
 3D-dimensional layer of cortex.
+
+## Exploring the Data
+
+### Data set contents
+
+The data set is a table consisting of the following columns: "cx", "cy", "cz", "unmasked", and "synapses". there are 61776 rows, each corresponding to a cortical volumn called "bins" henceforth. 
+
+"cx", "cy", and "cz" denote the unique location of the bin. "synapses" is an integer count of the number of synapses found within the bin. 
+Each bin was comprised of many individual voxels of the EM image. A synapse could technically be found at any given voxel. However, a subset of these voxels were pre-determined by the experimenters to contain material that are not synapses (i.e. cell bodies). These voxels were considered "masked". Thus the "unmasked" voxels comprise the subset area of each bin in which a synapse may reside. 
+
+We found no values within our data set that were "bad": no NaNs, Infs or nonsensical values. All numbers were integers as expected. Synapses and unmasked values were nonnegative. 
+
+### Statistics
+* There are roughly  7.7e6 total synapses across the entire cortical volume
+* The maximum number of synapses per bin is 507
+* The mean number of synapses per bin is 124.7
+* The median number of synapses per bin is 144
+* The standard deviation of synapses per bin is 92.0
+* The dimensions of each bin is 3.9 x 3.9 x 5.55 um^3
+* The dimensions of the entire scanned cortical volume is 421.2 x 202.8 x 61.1 um^3
+
+### Exploritory Analysis - Raw Synapse Count
+
+#### Distribution of Synapses
+Shown is a histogram of synapse count across all bins of the dataset.
+<img src="./figs/AndrewFigs/histSyn.png" data-canonical-src="./figs/AndrewFigs/histSyn.png" width="600" />
+* There are a significant amount of zero or low-count bins. Later we realized that this was due to masking.
+* Bins with higher synapse counts seem to be roughly normally distributed
+
+To get a sense of outliers, we boxplotted synapse count.
+<img src="./figs/AndrewFigs/boxSyn.png" data-canonical-src="./figs/AndrewFigs/boxSyn.png" width="600" />
+Only two bins were determined to be outliers.
+
+#### 1-Dimensional Marginal Distributions
+Shown are the marginal distributions of synapse count for along the cortical dimensions of x, y, and z
+<img src="./figs/AndrewFigs/histX.png" data-canonical-src="./figs/AndrewFigs/histX.png" width="600" />
+<img src="./figs/AndrewFigs/histY.png" data-canonical-src="./figs/AndrewFigs/histY.png" width="600" />
+<img src="./figs/AndrewFigs/histZ.png" data-canonical-src="./figs/AndrewFigs/histZ.png" width="600" />
+A couple observations are apparent:
+* synapse count is relatively uniform across x and z dimensions 
+* synapse count is not uniform across y dimension. The drop-off in synapse count at higher values of y is primarily due to edge effects of the data volume
+* However, even away from the edges, there seems to be a slight negative trend beween synapse density and y-coordinate
+
+#### 2-Dimensional Marginal Distributions
+Shown are the heatmaps of synapse count.
+<img src="./figs/AndrewFigs/heatXY.png" data-canonical-src="./figs/AndrewFigs/heatXY.png" width="600" />
+<img src="./figs/AndrewFigs/heatXZ.png" data-canonical-src="./figs/AndrewFigs/heatXZ.png" width="600" />
+<img src="./figs/AndrewFigs/heatYZ.png" data-canonical-src="./figs/AndrewFigs/heatYZ.png" width="600" />
+* The z-dimension is much courser than x and y. There are far less z-layers than x and y.
+* The edge effects affecting the y-dimension distribution in the previous section are apparent in the y-z heatmap. Each Z layers had a variable edge cutoff in the y-dimension
+* The x and z dimensions fairly "rectangular". There are significant edge effects here.
+* Certain z-layers appear to be more dense than others. We investigate this further later.
+
+### Exporatory Analysis - Weighted Synaptic Count
+At this point, we realized the significance of the unmasked data. We incorporated unmasked considerations into our subsequent exploratory analysis.
+
+#### Distribution of Unmasked Count
+Shown is a box plot of the unmasked count:
+<img src="./figs/AndrewFigs/boxUm.png" data-canonical-src="./figs/AndrewFigs/boxUm.png" width="600" />
+* There are no outliers 
+* There is a lower tail
+
+#### Synapse vs. Unmasked 
+Shown is a joing plot of Synapse vs. unmasked data.
+<img src="./figs/AndrewFigs/jointPlotSynUm.png" data-canonical-src="./figs/AndrewFigs/jointPlotSynUm.png" width="600" />
+* note that the marginal distribution of synapse count is a repeat of what was shown before
+* now we can appreciate the degree to which synapse count is affected by unmasked count. Virtually all the bins with zero-to-low synapse counts were the unmasked count also being zero-to-low
+* There is an overall positive correlation between unmasked and synapse data, as one might expect. 
+* Most of the data lies in a dense region of relatively high unmasked and synapse count. Within this region, there is less correlation between synapse and unmasked count.
+
+#### Weighted Synapse
+At this point we did two things with the data:
+1) We defined "weighted" synapse count of a bin as the raw synapse count divided by the unmasked count
+2) We discarded all bins with lower than 50% of voxels unmasked
+
+Shown is the distribution of weighted synapses over all bins that met the 50% unmasked requirement:
+<img src="./figs/AndrewFigs/histW.png" data-canonical-src="./figs/AndrewFigs/histW.png" width="600" />
+We have successfully pruned out the subset of bins with zero-to-low synapse/unmasked count. The remaining data looks fairly normally distributed.
+All subsequent analysis was carried out with weighted and thresholded synapse count, and is referred to as "weighted synapse count".
+
+## Hypothesis Testing
+
+### Statistical Test
+We decided to test whether the weighted synapse count follows a poisson distribution. 
+
+#### Test Definition
+
+* $\lambda$ is average number of synapses per bin
+* $X_i$ is the number of synapses in a 3D bin $i \in \{1, 2, ..., N\}$
+* $\chi^2 = \sum{\frac{(Observed-Expected)^2}{Expected}}$
+* $H_0$: $X_i$ is Poisson (with rate $\lambda$)
+* $H_1$: $X_i$ is not Poisson
+
+#### Algorithm
+* Combine the tails and/or coarsen bins of $X_i$ histogram so that all cells have at least 5 observations (http://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm)
+* New histogram $O_j$ is the number of observations (3D bins) with $k$ synapses, where $k \in j^{th}$ cell, $j \in \{1,2,...,m\}$ (m total cells)
+* Compute $E_j = \sum_{k \in cell(j)}{N\frac{\lambda^k exp(-\lambda)}{k!}}$, $j \in \{1,2,...,m\}$
+* $\chi^2 = \sum_{j=1}^{m}{\frac{(O_j-E_j)^2}{E_j}}$
+* Degrees of freedom = $m-2$
+* Significance level $\alpha = 0.05$
+* If $\chi^2 > \chi^2_{1-\alpha,m-2}$, we reject the null hypothesis.
+* Otherwise, there is not sufficient evidence to conclude that $X_i$ is not Poisson.
+
+#### Simulated Data
+We simulated data from poisson as well as geometric distributions under a range of sample sizes. We tested each set of simulated data under th Null Hypothesis that the data set was a poisson distribution. Thus, data generated by a poisson process was considered the "Null Model", while data generated by a geometric distribution was considered the "Alt Model"
+
+#### Simulated Data Result
+Shown is a the power of our statistical test over a range of sample sizes
+
+<img src="./figs/AndrewFigs/poissSim.png" data-canonical-src="./figs/AndrewFigs/poissSim.png" width="600" />
+
+* As expected, data under the null model was rejected at alpha level over all sample sizes
+* The power of our statistical test increased with sample size, approaching 1.0
+
+#### Statistical Test on Weighted Data
+We applied our test to our weighted synapse data by setting $\lambda$ to the observed mean of weighted synapse count. 
+
+Shown is a comparison of the observed vs. expected weighted synapse counts:
+
+<img src="./figs/AndrewFigs/chiObsExp.png" data-canonical-src="./figs/AndrewFigs/chiObsExp.png" width="600" />
+
+* chi-squared statistic:  inf
+* p-value:  0.0
+* Clearly the data was not poisson distributed
+* We should have used a model with more than one degree of freedom (i.e. normal distribution). That way we could individually vary/fit a parameter for mean as well as a parameter for spread.
+
+## Classification
+
+### Problem Definition
+We divided the bins according to Z layer, and attempted to classify the Z-layers based on weighted synapse count.
+
+#### Assumptions
+* The set of mean synapse density of an entire Z-layer can be classified into 2 groups: $W_i$
+* $W_i = \{\text{High density},\text{  Low density}\}$  
+* The distribution of synapse density of each group is normally distributed 
+
+#### Classification Probelm
+* We then randomly choose a small grid, and use the $X$ and $Y$ position to predict this grid belongs to high or low density.  
+  
+* $N$ is the number of synapses (observations)
+* $X_i = X\text{ position} $  
+* $Y_i = Y\text{ position} $  
+* $H_0 = N \perp\!\!\!\perp X, Y$ positions
+* $H_1 = N \text{ is not} \perp\!\!\!\perp X, Y$ positions  
+* The objective is to minimize the expected error:  
+* $E[l] = \sum_{n=1}^{\infty}I(\hat{W_i} \neq W_i)$ where $I$ is the indicator function.
+
+Classification methods:
+
+* lda (Linear Discriminant Analysis): No parameter.
+* qda (Quadratic Discriminant Analysis): No parameter.
+* svm (Support Vector Machine): Linear kernel, penalty parameter set to 0.001, to improve computation time.
+* knn (K-Nearest Neighbours): Number of neighbors set to 3.
+* rf (Random Forest): Default values except maximum depth set to 5.
+
+### Implementation / Setup
+
+#### Example x-y grid
+Shown is an example of a 5-by-5 grid of bins.
+<img src="./figs/AndrewFigs/chiObsExp.png" data-canonical-src="./figs/AndrewFigs/chiObsExp.png" width="600" />
+
+We average the weighted synapse density across the 25 bins to produce a single "grid mean". 
+
+#### Grid Means by Z-layer,
+We randomly sample 1000 grids from each Z-layer and visualize the distribution of grid means
+
+<img src="./figs/AndrewFigs/gridDistByLayer.png" data-canonical-src="./figs/AndrewFigs/gridDistByLayer.png" width="600" />
+
+#### Separating the Z-layers into 2 Groups
+We then took the means of the grid-means of each Z-layer (to have 11 means total), and performed K-means clustering to isolate two groups: one "high-response" group and one "low-response" group.
+
+<img src="./figs/AndrewFigs/kmeansGrid.png" data-canonical-src="./figs/AndrewFigs/kmeansGrid.png" width="600" />
+
+The low-response group comprised of 8 Z-layers, while the high-response group comprised of 3 Z-layers
+
+#### Grid Means Across the 2 Groups
+Shown is the distribution of grid-means of each group
+
+<img src="./figs/AndrewFigs/pdf.png" data-canonical-src="./figs/AndrewFigs/pdf.png" width="600" />
+
+It is immediately obvious that the two groups have a significant overlap in grid means.  Classification is not expected to be very successful.
+
+### Classification Results
+
+#### Accuracy of each classifier
+Accuracy of Nearest Neighbors: 0.75 (+/- 0.01)
+Accuracy of Linear SVM: 0.80 (+/- 0.01)
+Accuracy of Random Forest: 0.80 (+/- 0.01)
+Accuracy of Linear Discriminant Analysis: 0.80 (+/- 0.01)
+Accuracy of Quadratic Discriminant Analysis: 0.80 (+/- 0.01)
+
+#### Interpretation
+The five classifiers tested had accuracies between 75-80%, which is better than chance. However, these numbers are only slightly at or above the maximum prior probability of 73%. This means that our classifiers are only slightly better than just choosing the class with the maximum prior 100% of the time, assuming we trust the priors. Taking into account the observed synapse density provides little added information, which is not surprising given the large overlap in observed densities from the two classes. If we wanted to distinguish between similar populations of Z layers but with different priors from another dataset, our accuracy would decrease accordingly.
 
 
 Weighted Synapse Data
