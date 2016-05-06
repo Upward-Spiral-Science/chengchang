@@ -16,7 +16,7 @@ Table of Contents:
        - [Weighted Synapse](#weighted-synapse)
 - [Hypothesis Testing](#hypothesis-testing)
     - [Statistical Test](#statistical-test)
-         - [TestDefinition](#test-definition)
+         - [Test Definition](#test-definition)
          - [Algorithm](#algorithm)
          - [Simulated Data](#simulated-data)
          - [Simulated Data Result](#simulated-data-result)
