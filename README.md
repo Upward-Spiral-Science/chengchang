@@ -4,8 +4,8 @@ Team repo for: andyweic, kchang17, trileica
 ## Table of Contents
 
 ### Assignment 1  
-[**``.draft/Assignment 1``**] (.draft/Assignment%201.md)  
-> Significance and Feasibility analysis
+[**``.draft/Assignment 1``**] (./draft/Assignment%201.md)  
+  > Significance and Feasibility analysis
 
 ### Assignment 2  
 [Specific Questions] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%202.md)
