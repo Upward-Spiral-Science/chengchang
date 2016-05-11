@@ -8,7 +8,7 @@ Team repo for: andyweic, kchang17, trileica
   > Significance and Feasibility analysis
 
 ### Assignment 2  
-[Specific Questions] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%202.md)
+[**``.draft/Assignment 2``**] (./draft/Assignment%202_update.md)
 > 6 types of questions
 
 ### Assignment 3  
@@ -29,11 +29,11 @@ Team repo for: andyweic, kchang17, trileica
 > Checking assumptions based on previous analysis
 
 ### Assignment 7  
-[Report_PPT] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%207.pdf)  
+[**``./draft/Assignment 7.pdf``**] (./draft/Assignment%207.pdf)  
 > Presentation about the findings so far
 
 ### Assignment 8  
-[Report_text] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment_8.md)  
+[**``./docs/Assignment 8.md``**] (./docs/Assignment_8.md)  
 > Report with the findings so far
 
 ### Assignment 9  
