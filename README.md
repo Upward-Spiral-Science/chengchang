@@ -12,20 +12,20 @@ Team repo for: andyweic, kchang17, trileica
 > 6 types of questions
 
 ### Assignment 3  
-[Answers] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%203.ipynb)  
+[**``.code/Assignment 3``**] (./code/Assignment%203.ipynb)  
 > Answering descriptive and exploratory questions
 
 ### Assignment 4   
-[Hypothesis Testing] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%204.ipynb)  
+[**``.code/Assignment 4``**] (./code/Assignment%204.ipynb)  
 > Answering inferential questions
 
 ### Assignment 5  
-[Classification] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%205%20update.ipynb)  
+[**``.code/Assignment 5``**] (./code/Assignment%205%20update.ipynb)  
 > Answering classification questions
 
 ### Assignment 6  
-[Check Assumptions] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%206%20update.ipynb)  
-[Update] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%206.ipynb)
+[**``.code/Assignment 6``**] (./code/Assignment%206.ipynb)
+[**``.code/Assignment 6 (update)``**] (./code/Assignment%206%20update.ipynb) 
 > Checking assumptions based on previous analysis
 
 ### Assignment 7  
@@ -37,25 +37,25 @@ Team repo for: andyweic, kchang17, trileica
 > Report with the findings so far
 
 ### Assignment 9  
-[New Analysis] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%209_combined.ipynb)  
+[**``.code/Assignment 9``**] (./code/Assignment%209_combined.ipynb)  
 > Start with new analysis 
 
 ### Assignment 10  
-[New Analysis] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%2010.ipynb)  
+[**``.code/Assignment 10``**] (./code/Assignment%2010.ipynb)  
 > Focus on the edges removed data
 
 ### Assignment 11  
-[New Analysis] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%2011.ipynb)  
-> 
+[**``.code/Assignment 11``**] (./code/Assignment%2011.ipynb)  
+> Clustering and computed correlation between Z-layer and weighted synapses 
 
 ### Assignment 12  
-[New Analysis] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%2012.ipynb)  
-> 
+[**``.code/Assignment 12``**] (./code/Assignment%2012.ipynb)  
+> Tried to find the trend along 1/2 dimensional space
 
 ### Assignment 13  
-[New Analysis] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%2013.ipynb)  
+[**``.code/Assignment 13``**] (./code/Assignment%2013.ipynb)  
 > Focus on the model fitting part
 
 ### Assignment 14
-[Final Report] (https://github.com/Upward-Spiral-Science/chengchang/blob/master/Assignment%2014.md)  
+[**``Assignment 14.md``**] (./Assignment%2014.md)  
 > Final report and conclusion about this analysis
