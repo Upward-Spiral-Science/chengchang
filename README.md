@@ -52,7 +52,7 @@ Team repo for: andyweic, kchang17, trileica
 
 ### Assignment 12  
 [**``.code/Assignment 12``**] (./code/Assignment%2012.ipynb)  
-> Tried to find the trend along 1/2 dimensional space
+> Tried to find the trend along 1 and 2-dimensional space
 
 ### Assignment 13  
 [**``.code/Assignment 13``**] (./code/Assignment%2013.ipynb)  
@@ -60,4 +60,4 @@ Team repo for: andyweic, kchang17, trileica
 
 ### Assignment 14
 [**``Assignment 14.md``**] (./Assignment%2014.md)  
-> Final report and conclusion about this analysis
+> Final report of this analysis
