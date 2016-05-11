@@ -26,6 +26,7 @@ Team repo for: andyweic, kchang17, trileica
 ### Assignment 6  
 [**``.code/Assignment 6``**] (./code/Assignment%206.ipynb)  
 > Checking assumptions based on previous analysis  
+
 [**``.code/Assignment 6 (update)``**] (./code/Assignment%206%20update.ipynb)  
 > Updated some parts  
 
