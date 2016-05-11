@@ -24,8 +24,8 @@ Team repo for: andyweic, kchang17, trileica
 > Answering classification questions
 
 ### Assignment 6  
-[**``.code/Assignment 6``**] (./code/Assignment%206.ipynb)
-[**``.code/Assignment 6 (update)``**] (./code/Assignment%206%20update.ipynb) 
+[**``.code/Assignment 6``**] (./code/Assignment%206.ipynb)  
+[**``.code/Assignment 6 (update)``**] (./code/Assignment%206%20update.ipynb)  
 > Checking assumptions based on previous analysis
 
 ### Assignment 7  
