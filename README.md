@@ -58,6 +58,6 @@ Team repo for: andyweic, kchang17, trileica
 [**``.code/Assignment 13``**] (./code/Assignment%2013.ipynb)  
 > Focus on the model fitting part
 
-### Assignment 14
+### Final Report
 [**``Assignment 14.md``**] (./Assignment%2014.md)  
 > Final report of this analysis
