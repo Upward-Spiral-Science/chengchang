@@ -576,21 +576,23 @@ on- and off- diagonal in the covariance matrix is very small, suggesting
 that they are not independent. Since the optimal number of clusters is
 1, we concluded the grid means are identical.
 
-\[FIGURE for \]
+![](figs/SWfigs/coef_gm.png?raw=true)
+![](figs/SWfigs/bic_gm.png?raw=true)
 
 About the Z-layers, as the ratio of on- and off-diagonal determinants is
 extremely large, we can conclude that they are independent in fact. But
 since the optimal number of clusters is not 1, suggesting that the
 Z-layers are not identically distributed.
 
-\[FIGURE for grid and Z\]
+![](figs/SWfigs/coco_gm.png?raw=true)
+![](figs/SWfigs/cocobic_gm.png?raw=true)
 
 Finally, we tested the conditional difference between high and low
 density Z-layers. From the figure below, it clearly that the classifier
 cannot distinguish grids just based on their means. Therefore this
 assumption is false.
 
-\[FIGURE for conditional\]
+![](figs/SWfigs/residual.png?raw=true)
 
 New Analysis
 ------------
@@ -603,29 +605,29 @@ First of all, we remove the edges and reexamine the data.
 
 #### X coordinate
 
-\[figure\]
+![](figs/SWfigs/X-coor_1.png?raw=true)
 
 #### Y coordinate
 
-\[figure\]
+![](figs/SWfigs/Y-coor_1.png?raw=true)
 
 #### Z coordinate
 
-\[figure\]
+![](figs/SWfigs/Z-coor_1.png?raw=true)
 
 ### Distribution of Data (1D)
 
 #### X coordinate
 
-\[figure\]
+![](figs/SWfigs/X-coor_2.png?raw=true)
 
 #### Y coordinate
 
-\[figure\]
+![](figs/SWfigs/Y-coor_2.png?raw=true)
 
 #### Z coordinate
 
-\[figure\]
+![](figs/SWfigs/Z-coor_2.png?raw=true)
 
 ### Distribution of Data (2D)
 
@@ -633,15 +635,15 @@ These plots are examining the data in 2-dimension.
 
 #### X-Y coordinate
 
-\[figure\]
+![](figs/SWfigs/XY-coor.png?raw=true)
 
 #### X-Z coordinate
 
-\[figure\]
+![](figs/SWfigs/XZ-coor.png?raw=true)
 
 #### Y-Z coordinate
 
-\[figure\]
+![](figs/SWfigs/YZ-coor.png?raw=true)
 
 ### 3D Plot
 
@@ -649,21 +651,21 @@ These plots are examining the data in 3-dimension.
 
 #### 3D plot of Weighted Synapese
 
-\[fig\]
+![](figs/SWfigs/3D_WS.png?raw=true)
 
 #### 3D Plot with High-density
 
-\[fig\]
+![](figs/SWfigs/3D_HWS.png?raw=true)
 
 #### 3D Plot with Very High-density
 
-\[fig\]
+![](figs/SWfigs/3D_VHWS.png?raw=true)
 
 ### Histogram of Weighted Synapses
 
 We ploted the histogram using the whole data set.
 
-\[fig\]
+![](figs/SWfigs/HD_hist.png?raw=true)
 
 ### 3D Plot with different filter levels
 
@@ -671,11 +673,11 @@ Also, we used different filter levels to look art the data.
 
 #### Filter level = 0.7
 
-\[fig\]
+![](figs/SWfigs/3D_FL_0.7.png?raw=true)
 
-#### Filter level = 0.8
+#### Filter level = 0.82
 
-\[fig\]
+![](figs/SWfigs/3D_FL_0.82.png?raw=true)
 
 ### Chi-squared Test for Uniform Distribution
 
@@ -688,7 +690,7 @@ rejected this hypothesis. Synapses are not uniformly distributed.
 We used boxplot try to examine whether there is the existence of
 outlier, and the answer is not.
 
-\[fig\]
+![](figs/SWfigs/box_WS.png?raw=true)
 
 ### Fourier Transform
 
@@ -696,13 +698,15 @@ Just for a try, we used Fourier transform to look at the data.
 
 #### X-Y coordinate
 
-\[figure\]
+![](figs/SWfigs/FT_XY.png?raw=true)
 
 #### X-Z coordinate
 
-\[figure\]
+![](figs/SWfigs/FT_XZ.png?raw=true)
 
 #### Y-Z coordinate
+
+![](figs/SWfigs/FT_YZ.png?raw=true)
 
 ### 1-Way ANOVA at Z-layer
 
@@ -723,33 +727,33 @@ distributed.
 
 #### Z-layer 1
 
-\[fig\]
+![](figs/SWfigs/qq-1.png?raw=true)
 
 #### Z-layer 2
 
-\[fig\]
+![](figs/SWfigs/qq-2.png?raw=true)
 
 #### Z-layer 3
 
-\[fig\]
+![](figs/SWfigs/qq-3.png?raw=true)
 
 #### Z-layer 4
 
-\[fig\]
+![](figs/SWfigs/qq-4.png?raw=true)
 
 #### Z-layer 5
 
-\[fig\]
+![](figs/SWfigs/qq-5.png?raw=true)
 
 #### Z-layer 6
 
-\[fig\]
+![](figs/SWfigs/qq-6.png?raw=true)
 
 ### Distribution of Y-layer
 
 First of all, let us look at the data of Y-layer.
 
-\[fig\]
+![](figs/SWfigs/dist_Y.png?raw=true)
 
 #### Distribution of Y-group
 
@@ -762,19 +766,19 @@ We then used 2-d plot to see the density in each Y-group.
 
 #### Y-group 1
 
-\[fig\]
+![](figs/SWfigs/den_y1.png?raw=true)
 
 #### Y-group 2
 
-\[fig\]
+![](figs/SWfigs/den_y2.png?raw=true)
 
 #### Y-group 3
 
-\[fig\]
+![](figs/SWfigs/den_y3.png?raw=true)
 
 #### Y-group 4
 
-\[fig\]
+![](figs/SWfigs/den_y4.png?raw=true)
 
 ### 1-way ANOVA at Y-group
 
@@ -888,18 +892,16 @@ The results again suggest the significant rejection.
 
 We checked the normality of Y-groups.
 
-\[fig\]
+![](figs/SWfigs/qq_yg.png?raw=true)
 
 ### Identical testing
 
 Also, we used the clustering to check whether Y-groups are identical by
 Using BIC score.
 
-\[fig\]
+![](figs/SWfigs/bic_yg.png?raw=true)
 
 The result showed that there are actually only 1 cluster in Y-group.
-
-\[fig\]
 
 ### Clustering
 
@@ -907,13 +909,13 @@ Evev though we know there are only 1 clustering suggested in last
 analysis, we were curious about if we specify more clusters to classify
 it, what it would be?
 
-\[fig\]
+![](figs/SWfigs/clu_3d.png?raw=true)
 
 #### Box plot
 
 Then we used box plot to see the properties of 3 different clusters.
 
-\[fig\]
+![](figs/SWfigs/box_c3.png?raw=true)
 
 #### Classification by 3D Cubes
 
@@ -989,11 +991,11 @@ number of synapses along Y/X axis.
 
 #### Along X Coordinate
 
-\[fig\]
+![](figs/SWfigs/alo_X.png?raw=true)
 
 #### Along Y Coordinate
 
-\[fig\]
+![](figs/SWfigs/alo_Y.png?raw=true)
 
 ### Blur images with Gaussian filter
 
@@ -1002,11 +1004,11 @@ tell us more information.
 
 #### Sigma = 0
 
-\[fig\]
+![](figs/SWfigs/GF_0.png?raw=true)
 
 #### Sigma = 1.5
 
-\[fig\]
+![](figs/SWfigs/GF_1.5.png?raw=true)
 
 ### GLCM in Z-layer
 
@@ -1015,15 +1017,19 @@ angles and distances.
 
 #### Level = 5
 
-\[fig\]
+![](figs/SWfigs/GLCM_L5.png?raw=true)
 
 #### Level = 40
 
-\[fig\]
+![](figs/SWfigs/GLCM_L40.png?raw=true)
 
 #### Patch = 6
 
-\[fig\]
+![](figs/SWfigs/GLCM_P6.png?raw=true)
+
+#### Patch = 12
+
+![](figs/SWfigs/GLCM_P12.png?raw=true)
 
 ### Compute GLCM Properties
 
@@ -1031,7 +1037,7 @@ Then, we computed the properties of GLCM, including the contrast,
 dissimilarity, homogeneity energy and correlation. From the figure
 below, we can know that they are all somwehat correlated.
 
-\[FIG\]
+![](figs/SWfigs/GLCM_Properties.png?raw=true)
 
 ### Entropy of Z-layer
 
@@ -1040,11 +1046,11 @@ that useful for further analysis.
 
 #### Disk = 5
 
-\[FIG\]
+![](figs/SWfigs/ED_5.png?raw=true)
 
 #### Disk = 20
 
-\[FIG\]
+![](figs/SWfigs/ED_20.png?raw=true)
 
 Weighted Synapse Data
 ---------------------
