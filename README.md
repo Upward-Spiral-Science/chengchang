@@ -59,5 +59,5 @@ Team repo for: andyweic, kchang17, trileica
 > Focus on the model fitting part
 
 ### Final Report
-[**``Assignment 14.md``**] (./Assignment%2014.md)  
+[**``Assignment 14.md``**] (./FR.md)  
 > Final report of this analysis
