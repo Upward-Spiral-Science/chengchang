@@ -567,7 +567,8 @@ is not 0 in the most part, it suggests that bins are not independent.
 But the optimal number of cluster is 1, which suggests that they are
 actually identically distributed.
 
-\[FIGURE for bins\]
+![](figs/SWfigs/coef_wd.png?raw=true)
+![](figs/SWfigs/bic_wd.png?raw=true)
 
 Then, we examined the iid assumption of means of grid as a whole and in
 Z-layer in particular. From the figures below, we see that the ratio of
